@@ -1,0 +1,47 @@
+{
+  "name": "start",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "svg2icon": "svg2icon",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "vue": "^3.4.29",
+    "axios": "^1.6.2",
+    "@geektech/utils": "^2.2.0",
+    "vue-router": "^4.2.5",
+    "@arco-design/web-vue": "^2.53.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vue-tsc": "^2.0.21",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@geektech/commitlint-config": "^0.0.2",
+    "prettier": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "eslint": "^8.36.0",
+    "@geektech/eslint-plugin": "^1.0.6",
+    "@geektech/svg2icon": "^1.0.7",
+    "less": "^4.2.0",
+    "vitest": "^1.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue,css,less,json,md}": [
+      "prettier --write"
+    ],
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
+  }
+}
